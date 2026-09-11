@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Mission | Diya</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script src="script.js"></script>
+
+<body>
+
+    <!-- =========================
+     SCREEN 1
+========================= -->
+
+    <section class="screen active" id="screen1">
+
+        <div class="main-card">
+
+            <div class="system">
+                SYSTEM STATUS: <span>COMPROMISED</span>
+            </div>
+
+            <div class="error-code">
+                ERROR_0xBIRTHDAY
+            </div>
+
+            <h1>🎂 BIRTHDAY INVITATION LOCKED 🎂</h1>
+
+            <p>
+                An important birthday mission has been detected.
+            </p>
+
+            <p class="small-text">
+                Only the real friend of Diya can unlock this surprise.
+            </p>
+
+            <div class="status-box">
+
+                <p>ACCESS RESTRICTED</p>
+                <p>SECURITY LAYERS: 05</p>
+                <p>STATUS: LOCKED 🔒</p>
+
+            </div>
+
+            <button type="button" id="startButton">
+                🚀 START MISSION
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     SCREEN 2
+========================= -->
+
+    <section class="screen" id="screen2">
+
+        <div class="main-card">
+
+            <div class="layer">
+                SECURITY LAYER 01 / 05
+            </div>
+
+            <h2>📸 Challenge 01</h2>
+
+            <p>
+                Diya jab bhi ready hoti hai,
+                sabse pehle usse kya karna pasand hota hai?
+            </p>
+
+            <div class="options">
+
+                <button type="button" class="wrong" data-message="Nahi 😂 Diya ko ye sabse pehle nahi karna hota!">
+                    🍕 Khana
+                </button>
+
+                <button type="button" class="wrong" data-message="Nahi 😴 Pehle photo session hota hai!">
+                    😴 Sona
+                </button>
+
+                <button type="button" class="correct" data-next="screen3">
+                    📸 Photo Click Karna
+                </button>
+
+            </div>
+
+            <p class="feedback" id="feedback1"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     SCREEN 3
+========================= -->
+
+    <section class="screen" id="screen3">
+
+        <div class="main-card">
+
+            <div class="layer">
+                SECURITY LAYER 02 / 05
+            </div>
+
+            <h2>😂 Challenge 02</h2>
+
+            <p>
+                Diya ka birthday hamesha kaun bhul jata hai?
+            </p>
+
+            <div class="options">
+
+                <button type="button" class="wrong" data-message="Mahi nahi 😂">
+                    😎 Mahi
+                </button>
+
+                <button type="button" class="correct" data-next="screen4">
+                    😭 Neelam
+                </button>
+
+                <button type="button" class="wrong" data-message="Abhi nahi 😂">
+                    🤭 Abhi
+                </button>
+
+            </div>
+
+            <p class="feedback" id="feedback2"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     SCREEN 4
+========================= -->
+
+    <section class="screen" id="screen4">
+
+        <div class="main-card">
+
+            <div class="layer">
+                SECURITY LAYER 03 / 05
+            </div>
+
+            <h2>💻 Challenge 03</h2>
+
+            <p>
+                Diya subah-subah uthke jati hai
+                aur shaam ko hi ghar aati hai... kya hai?
+            </p>
+
+            <div class="options">
+
+                <button type="button" class="correct" data-next="screen5">
+                    💻 Lab
+                </button>
+
+                <button type="button" class="wrong" data-message="Shopping nahi 😂">
+                    🛍️ Shopping
+                </button>
+
+                <button type="button" class="wrong" data-message="Ghoomne nahi 😂">
+                    🌳 Ghoomne
+                </button>
+
+                <button type="button" class="wrong" data-message="Mahi ke ghar bhi nahi 😂">
+                    🏠 Mahi ke Ghar
+                </button>
+
+            </div>
+
+            <p class="feedback" id="feedback3"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     SCREEN 5
+========================= -->
+
+    <section class="screen" id="screen5">
+
+        <div class="main-card">
+
+            <div class="layer">
+                SECURITY LAYER 04 / 05
+            </div>
+
+            <h2>🛍️ Challenge 04</h2>
+
+            <p>
+                Diya ko sabse zyada kya lena pasand hai?
+            </p>
+
+            <div class="options">
+
+                <button type="button" class="correct" data-next="screen6">
+                    👗 Dress
+                </button>
+
+                <button type="button" class="wrong" data-message="Shoes achhe hain, but answer nahi 😂">
+                    👟 Shoes
+                </button>
+
+                <button type="button" class="wrong" data-message="Bag nahi 😂">
+                    🎒 Bag
+                </button>
+
+                <button type="button" class="wrong" data-message="Makeup nahi 😅">
+                    💄 Makeup
+                </button>
+
+            </div>
+
+            <p class="feedback" id="feedback4"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     SCREEN 6
+========================= -->
+
+    <section class="screen" id="screen6">
+
+        <div class="main-card">
+
+            <div class="layer">
+                SECURITY LAYER 05 / 05
+            </div>
+
+            <h2>😤 Final Challenge</h2>
+
+            <p>
+                Diya se hamesha kaun gussa hota hai?
+            </p>
+
+            <div class="options">
+
+                <button type="button" class="wrong" data-message="Mahi nahi 😂">
+                    😇 Mahi
+                </button>
+
+                <button type="button" class="wrong" data-message="Abhi nahi 😂">
+                    🤭 Abhi
+                </button>
+
+                <button type="button" class="correct" data-next="screen7">
+                    😤 Neelam
+                </button>
+
+            </div>
+
+            <p class="feedback" id="feedback5"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     SCREEN 7
+========================= -->
+
+    <section class="screen" id="screen7">
+
+        <div class="main-card unlocked">
+
+            <div class="success">
+                ACCESS GRANTED ✓
+            </div>
+
+            <div class="big-lock">
+                🔓
+            </div>
+
+            <h1>MISSION UNLOCKED!</h1>
+
+            <p>
+                Security layers successfully bypassed.
+            </p>
+
+            <p>
+                Diya's birthday surprise is ready.
+            </p>
+
+            <button type="button" id="birthdayButton">
+                🎁 OPEN BIRTHDAY SURPRISE
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     SCREEN 8
+========================= -->
+
+    <section class="screen" id="screen8">
+
+        <div class="main-card birthday-card">
+
+            <div class="sparkle">✨ ✨ ✨</div>
+
+            <h1 class="birthday-title">
+                HAPPY BIRTHDAY!
+            </h1>
+
+            <h2 class="birthday-name">
+                🎀 DIYA 🎀
+            </h2>
+
+            <p>
+                Today is not just another day...
+            </p>
+
+            <p>
+                Today is the day our favourite person was born! 💕
+            </p>
+
+            <div class="emoji-row">
+                🎈 🎂 🎁 🥳 🎉
+            </div>
+
+            <button type="button" id="memoriesButton">
+                📸 SEE OUR MEMORIES
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     SCREEN 9
+========================= -->
+
+    <section class="screen" id="screen9">
+
+        <div class="main-card">
+
+            <h1>📸 MEMORY LANE</h1>
+
+            <p>
+                Some moments are too special to forget. ❤️
+            </p>
+
+            <div class="photo-grid">
+
+                <div class="photo-card">
+                    <img src="photos/photo1.jpg" alt="Memory 1">
+                    <p>✨ Memory 01</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="photos/photo2.jpg" alt="Memory 2">
+                    <p>💕 Memory 02</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="photos/photo3.jpg" alt="Memory 3">
+                    <p>😂 Memory 03</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="photos/photo4.jpg" alt="Memory 4">
+                    <p>🥹 Memory 04</p>
+                </div>
+
+            </div>
+
+            <button type="button" id="messageButton">
+                💌 READ MY MESSAGE
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     SCREEN 10
+========================= -->
+
+    <section class="screen" id="screen10">
+
+        <div class="main-card message-card">
+
+            <div class="letter-icon">
+                💌
+            </div>
+
+            <h1>A MESSAGE FOR DIYA</h1>
+
+            <div class="message">
+
+                <p>
+                    Dear Diya ❤️,
+                </p>
+
+                <p>
+                    Happy Birthday to one of the most special people! 🎂
+                </p>
+
+                <p>
+                    Life becomes more fun, memorable and crazy
+                    because of friends like you. 😂
+                </p>
+
+                <p>
+                    I hope this new year of your life brings
+                    lots of happiness, success, beautiful memories
+                    and countless reasons to smile. ✨
+                </p>
+
+                <p>
+                    Keep smiling, keep shining and keep being
+                    the amazing Diya you are! 💕
+                </p>
+
+                <p class="final-line">
+                    Once again... HAPPY BIRTHDAY! 🥳🎂🎉
+                </p>
+
+            </div>
+
+            <button type="button" id="cakeButton">
+                🎂 ONE LAST SURPRISE
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     SCREEN 11
+========================= -->
+
+    <section class="screen" id="screen11">
+
+        <div class="cake-screen">
+
+            <div class="cake-message" id="cakeMessage">
+                A little birthday magic is coming... ✨
+            </div>
+
+            <!-- CAKE -->
+
+            <div class="cake-area hidden" id="cake">
+
+                <div class="candle">
+
+                    <div class="flame" id="flame">
+                        🔥
+                    </div>
+
+                    <div class="candle-body"></div>
+
+                </div>
+
+                <div class="cake-top">
+                    <div class="icing"></div>
+                </div>
+
+                <div class="cake-middle"></div>
+
+                <div class="cake-bottom"></div>
+
+            </div>
+
+
+            <h1 class="final-birthday hidden" id="finalBirthday">
+                🎉 HAPPY BIRTHDAY 🎉
+            </h1>
+
+            <h2 class="final-name hidden" id="finalName">
+                🎀 DIYA 🎀
+            </h2>
+
+
+            <button type="button" class="blow-button hidden" id="blowButton">
+                💨 BLOW THE CANDLE
+            </button>
+
+
+            <div class="fireworks hidden" id="fireworks">
+
+                <span>🎆</span>
+                <span>✨</span>
+                <span>🎇</span>
+                <span>✨</span>
+                <span>🎆</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     JAVASCRIPT
+========================= -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            /* -------------------------
+               SCREEN NAVIGATION
+            ------------------------- */
+
+            function showScreen(screenId) {
+
+                document.querySelectorAll(".screen").forEach(function (screen) {
+                    screen.classList.remove("active");
+                });
+
+                const nextScreen = document.getElementById(screenId);
+
+                if (nextScreen) {
+                    nextScreen.classList.add("active");
+                    window.scrollTo(0, 0);
+                }
+            }
+
+
+            /* -------------------------
+               START MISSION
+            ------------------------- */
+
+            document.getElementById("startButton").addEventListener("click", function () {
+                showScreen("screen2");
+            });
+
+
+            /* -------------------------
+               CORRECT ANSWERS
+            ------------------------- */
+
+            document.querySelectorAll(".correct").forEach(function (button) {
+
+                button.addEventListener("click", function () {
+
+                    const nextScreen = this.getAttribute("data-next");
+
+                    if (nextScreen) {
+                        showScreen(nextScreen);
+                    }
+
+                });
+
+            });
+
+
+            /* -------------------------
+               WRONG ANSWERS
+            ------------------------- */
+
+            document.querySelectorAll(".wrong").forEach(function (button) {
+
+                button.addEventListener("click", function () {
+
+                    const message = this.getAttribute("data-message");
+
+                    const currentScreen = this.closest(".screen");
+
+                    const feedback = currentScreen.querySelector(".feedback");
+
+                    if (feedback) {
+
+                        feedback.textContent = message;
+                        feedback.classList.add("show");
+
+                        setTimeout(function () {
+                            feedback.classList.remove("show");
+                        }, 2500);
+
+                    }
+
+                });
+
+            });
+
+
+            /* -------------------------
+               BIRTHDAY SURPRISE
+            ------------------------- */
+
+            document.getElementById("birthdayButton")
+                .addEventListener("click", function () {
+
+                    showScreen("screen8");
+
+                });
+
+
+            /* -------------------------
+               MEMORIES
+            ------------------------- */
+
+            document.getElementById("memoriesButton")
+                .addEventListener("click", function () {
+
+                    showScreen("screen9");
+
+                });
+
+
+            /* -------------------------
+               MESSAGE
+            ------------------------- */
+
+            document.getElementById("messageButton")
+                .addEventListener("click", function () {
+
+                    showScreen("screen10");
+
+                });
+
+
+            /* -------------------------
+               CAKE
+            ------------------------- */
+
+            document.getElementById("cakeButton")
+                .addEventListener("click", function () {
+
+                    startCake();
+
+                });
+
+
+            function startCake() {
+
+                showScreen("screen11");
+
+                const cake = document.getElementById("cake");
+                const message = document.getElementById("cakeMessage");
+                const blowButton = document.getElementById("blowButton");
+                const flame = document.getElementById("flame");
+
+                cake.classList.add("hidden");
+                blowButton.classList.add("hidden");
+
+                document.getElementById("finalBirthday")
+                    .classList.add("hidden");
+
+                document.getElementById("finalName")
+                    .classList.add("hidden");
+
+                document.getElementById("fireworks")
+                    .classList.add("hidden");
+
+                flame.style.display = "block";
+
+                message.textContent =
+                    "A little birthday magic is coming... ✨";
+
+
+                setTimeout(function () {
+
+                    cake.classList.remove("hidden");
+
+                    message.textContent =
+                        "Your birthday cake is ready... 🎂";
+
+                }, 1800);
+
+
+                setTimeout(function () {
+
+                    message.textContent =
+                        "Make a wish... 🕯️";
+
+                    blowButton.classList.remove("hidden");
+
+                }, 3800);
+
+            }
+
+
+            /* -------------------------
+               BLOW CANDLE
+            ------------------------- */
+
+            document.getElementById("blowButton")
+                .addEventListener("click", function () {
+
+                    blowCandle();
+
+                });
+
+
+            function blowCandle() {
+
+                const flame = document.getElementById("flame");
+                const blowButton = document.getElementById("blowButton");
+                const message = document.getElementById("cakeMessage");
+                const fireworks = document.getElementById("fireworks");
+                const finalBirthday = document.getElementById("finalBirthday");
+                const finalName = document.getElementById("finalName");
+
+                /* Candle goes out */
+
+                flame.style.display = "none";
+
+                blowButton.classList.add("hidden");
+
+                message.textContent =
+                    "✨ WISH SENT INTO THE UNIVERSE ✨";
+
+
+                /* Fireworks */
+
+                setTimeout(function () {
+
+                    fireworks.classList.remove("hidden");
+
+                    message.textContent =
+                        "🎆 LET THE CELEBRATION BEGIN! 🎆";
+
+                }, 1000);
+
+
+                /* Final reveal */
+
+                setTimeout(function () {
+
+                    finalBirthday.classList.remove("hidden");
+
+                    finalName.classList.remove("hidden");
+
+                    message.style.display = "none";
+
+                }, 2800);
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

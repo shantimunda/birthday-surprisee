@@ -1,0 +1,818 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top, #35135c, #120b24 55%, #05030b);
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   SCREENS
+========================= */
+
+.screen {
+    display: none;
+    min-height: 100vh;
+    width: 100%;
+    padding: 30px 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen.active {
+    display: flex;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.main-card {
+    width: min(650px, 100%);
+    padding: 35px 25px;
+    text-align: center;
+
+    background: rgba(20, 12, 40, 0.92);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 30px rgba(255, 0, 180, 0.18),
+        0 0 70px rgba(80, 0, 255, 0.15);
+
+    animation: cardAppear 0.7s ease;
+}
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.system {
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.system span {
+    color: #ff4f8b;
+}
+
+.error-code {
+    color: #ff6b9f;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(28px, 6vw, 48px);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: clamp(25px, 5vw, 38px);
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.7;
+    margin: 12px 0;
+    color: #eeeeee;
+}
+
+.small-text {
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+
+/* =========================
+   STATUS BOX
+========================= */
+
+.status-box {
+    margin: 25px auto;
+    padding: 18px;
+
+    max-width: 400px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.status-box p {
+    font-family: monospace;
+    font-size: 14px;
+}
+
+
+/* =========================
+   LAYER
+========================= */
+
+.layer {
+    color: #ff70aa;
+    font-family: monospace;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    display: block;
+
+    width: min(420px, 100%);
+
+    margin: 14px auto;
+    padding: 15px 20px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: linear-gradient(135deg,
+            #ff4f91,
+            #8c4dff);
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    position: relative;
+    z-index: 100;
+
+    pointer-events: auto;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 80, 160, 0.3);
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================
+   OPTIONS
+========================= */
+
+.options {
+    margin-top: 25px;
+}
+
+.options button {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.options button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================
+   FEEDBACK
+========================= */
+
+.feedback {
+    min-height: 25px;
+    margin-top: 20px;
+
+    color: #ff87b4;
+
+    font-weight: bold;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feedback.show {
+    opacity: 1;
+}
+
+
+/* =========================
+   UNLOCKED
+========================= */
+
+.unlocked {
+    animation: unlockPulse 1.5s infinite alternate;
+}
+
+@keyframes unlockPulse {
+
+    from {
+        box-shadow: 0 0 25px rgba(255, 70, 170, 0.2);
+    }
+
+    to {
+        box-shadow: 0 0 60px rgba(255, 70, 170, 0.5);
+    }
+
+}
+
+.success {
+    color: #67ffb2;
+    font-family: monospace;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.big-lock {
+    font-size: 75px;
+    margin: 20px;
+}
+
+
+/* =========================
+   BIRTHDAY
+========================= */
+
+.birthday-card {
+    background:
+        linear-gradient(135deg,
+            rgba(255, 60, 150, 0.13),
+            rgba(120, 50, 255, 0.13));
+}
+
+.birthday-title {
+    background: linear-gradient(90deg,
+            #ff70ad,
+            #ffd166,
+            #b17cff);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    animation: birthdayGlow 1.5s infinite alternate;
+}
+
+@keyframes birthdayGlow {
+
+    from {
+        filter: drop-shadow(0 0 3px rgba(255, 100, 180, 0.4));
+    }
+
+    to {
+        filter: drop-shadow(0 0 15px rgba(255, 100, 180, 0.8));
+    }
+
+}
+
+.birthday-name {
+    color: #ffd166;
+}
+
+.emoji-row {
+    font-size: 38px;
+    margin: 25px 0;
+    letter-spacing: 10px;
+    animation: floatEmoji 2s infinite alternate;
+}
+
+@keyframes floatEmoji {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-8px);
+    }
+
+}
+
+.sparkle {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   PHOTOS
+========================= */
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin: 30px 0;
+}
+
+.photo-card {
+    padding: 10px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    transform: rotate(-1deg);
+
+    transition: transform 0.3s ease;
+}
+
+.photo-card:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.photo-card:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+.photo-card img {
+    display: block;
+
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+.photo-card p {
+    margin: 8px 0 2px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message-card {
+    max-width: 700px;
+}
+
+.letter-icon {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.message {
+    margin: 25px 0;
+    padding: 25px;
+
+    text-align: left;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border-left: 3px solid #ff6fa8;
+
+    border-radius: 15px;
+}
+
+.message p {
+    margin-bottom: 18px;
+}
+
+.final-line {
+    text-align: center;
+    color: #ffd166 !important;
+    font-weight: bold;
+}
+
+
+/* =========================
+   CAKE SCREEN
+========================= */
+
+.cake-screen {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.cake-message {
+    min-height: 40px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-bottom: 30px;
+
+    animation: messagePulse 1.5s infinite alternate;
+}
+
+@keyframes messagePulse {
+
+    from {
+        opacity: 0.6;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.cake-area {
+    position: relative;
+
+    width: 260px;
+    height: 220px;
+
+    margin: 20px auto;
+
+    animation: cakeAppear 1s ease;
+}
+
+@keyframes cakeAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(80px) scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* Cake bottom */
+
+.cake-bottom {
+    position: absolute;
+
+    bottom: 15px;
+    left: 10px;
+
+    width: 240px;
+    height: 70px;
+
+    border-radius: 15px 15px 25px 25px;
+
+    background: linear-gradient(#ff75a8,
+            #d93e76);
+
+    box-shadow:
+        inset 0 -10px rgba(120, 20, 70, 0.2),
+        0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Cake middle */
+
+.cake-middle {
+    position: absolute;
+
+    bottom: 70px;
+    left: 30px;
+
+    width: 200px;
+    height: 55px;
+
+    border-radius: 15px;
+
+    background: linear-gradient(#ffd166,
+            #f5a623);
+}
+
+
+/* Cake top */
+
+.cake-top {
+    position: absolute;
+
+    bottom: 120px;
+    left: 45px;
+
+    width: 170px;
+    height: 55px;
+
+    border-radius: 18px 18px 10px 10px;
+
+    background: #ffb6d1;
+}
+
+
+/* Icing */
+
+.icing {
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 100%;
+    height: 25px;
+
+    background: white;
+
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* Candle */
+
+.candle {
+    position: absolute;
+
+    bottom: 172px;
+    left: 118px;
+
+    width: 24px;
+    height: 55px;
+
+    z-index: 5;
+}
+
+.candle-body {
+    width: 24px;
+    height: 55px;
+
+    border-radius: 5px;
+
+    background:
+        repeating-linear-gradient(45deg,
+            #ffffff,
+            #ffffff 7px,
+            #ff5b98 7px,
+            #ff5b98 14px);
+}
+
+
+/* Flame */
+
+.flame {
+    position: absolute;
+
+    top: -42px;
+    left: 1px;
+
+    font-size: 38px;
+
+    animation: flameMove 0.4s infinite alternate;
+}
+
+@keyframes flameMove {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.12) translateY(-3px);
+    }
+
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================
+   BLOW BUTTON
+========================= */
+
+.blow-button {
+    margin-top: 20px;
+    max-width: 300px;
+}
+
+
+/* =========================
+   FINAL BIRTHDAY
+========================= */
+
+.final-birthday {
+    margin-top: 20px;
+
+    color: #ffd166;
+
+    animation:
+        finalAppear 1s ease,
+        finalGlow 1.5s infinite alternate;
+}
+
+.final-name {
+    color: #ff75ae;
+    animation: finalAppear 1s ease;
+}
+
+@keyframes finalAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes finalGlow {
+
+    from {
+        text-shadow: 0 0 5px #ffd166;
+    }
+
+    to {
+        text-shadow:
+            0 0 15px #ffd166,
+            0 0 30px #ff6fa8;
+    }
+
+}
+
+
+/* =========================
+   FIREWORKS
+========================= */
+
+.fireworks {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+
+    pointer-events: none;
+
+    z-index: 20;
+
+    font-size: 55px;
+
+    animation: fireworksAppear 0.8s ease;
+}
+
+.fireworks span:nth-child(1) {
+    animation: fireworkFloat 1.2s infinite alternate;
+}
+
+.fireworks span:nth-child(2) {
+    animation: fireworkFloat 1.5s infinite alternate-reverse;
+}
+
+.fireworks span:nth-child(3) {
+    animation: fireworkFloat 1s infinite alternate;
+}
+
+.fireworks span:nth-child(4) {
+    animation: fireworkFloat 1.4s infinite alternate-reverse;
+}
+
+.fireworks span:nth-child(5) {
+    animation: fireworkFloat 1.1s infinite alternate;
+}
+
+@keyframes fireworkFloat {
+
+    from {
+        transform: scale(0.7) translateY(20px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(1.3) translateY(-30px);
+        opacity: 1;
+    }
+
+}
+
+@keyframes fireworksAppear {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .screen {
+        padding: 18px 10px;
+    }
+
+    .main-card {
+        padding: 28px 17px;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 14px 12px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card img {
+        height: 240px;
+    }
+
+    .emoji-row {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+
+    .cake-area {
+        transform: scale(0.85);
+    }
+
+    .cake-message {
+        font-size: 17px;
+    }
+
+    .fireworks {
+        font-size: 40px;
+    }
+
+}
